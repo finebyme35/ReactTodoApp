@@ -175,7 +175,7 @@ textarea{
 }
 .form-group{
   display: flex;
-  background-color: rgb(192, 216, 243);
+  background-color: rgb(215, 218, 221);
   justify-content: center;
   align-items: center;
   margin: 1rem;
@@ -190,7 +190,7 @@ textarea{
 .form-group-area{
   padding: 4rem;
   margin: 0.1rem;
-  background-color: rgb(247, 192, 166);
+  background-color: rgb(224, 213, 241);
   border: 8px solid rgba(223, 187, 187, 0.2);
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
@@ -262,9 +262,9 @@ textarea{
 .btn-edit{
   display: flex;
   margin: 0.5rem 3rem;
-  border: 1px solid rgba(240, 204, 42, 0.884);
+  border: 1px solid rgba(243, 228, 163, 0.884);
   text-decoration: none;
-  background-color: rgba(240, 204, 42, 0.884);
+  background-color: rgba(247, 223, 118, 0.884);
   color: black;
 }
 .btn-edit:hover{
