@@ -1,5 +1,7 @@
-body {
+*, *::before,*::after{
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +12,946 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.container{
+  max-width: 1200px;
+  margin: auto;
+}
+textarea{
+  width: 300px;
+}
+
+.toolbar{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(161, 125, 245);
+  
+}
+.toolbar-title{
+  margin: 7.5rem;
+  text-decoration: none;
+  color:black;
+  font-size: xx-large;
+  font-weight: 3000;
+}
+.toolbar-link{
+  display: flex;
+  padding-right: 3rem;
+}
+.toolbar-link-item{
+  padding: 0.2rem 0 0 1rem;
+  margin: 1rem 1rem;
+  text-decoration: none;
+  color: black;
+  font-size: x-large;
+  font-weight: 500;
+}
+.todo-layout{
+  margin: 0.5rem 0;
+}
+.card{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 15px;
+  max-width: 1200px;
+  margin: auto;
+  
+}
+
+.todo-card{
+  box-shadow:  0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 4rem;
+  margin: 1rem;
+  background-color: whitesmoke;
+  border: 1px solid rgb(228, 211, 211)
+
+}
+.todo-card:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background-color: rgb(212, 211, 211);
+}
+.todo-name{
+  font-size: xx-large;
+  font-weight: 3000;
+  padding: 0.2rem;
+  margin: 0.2rem;
+}
+.todo-description{
+  font-size: xx-large;
+  font-weight: 5000;
+  padding: 0.2rem;
+  margin: 0.2rem;
+}
+.todo-completed{
+  margin: 0.2rem;
+  padding: 0.2rem;
+  font-size: x-large;
+  font-weight: 400;
+}
+
+.btn{
+  padding: 1rem;
+  margin: 0.2rem;
+  
+}
+.btn-warning{
+  border: 1px solid rgb(236, 158, 68);
+  text-decoration: none;
+  background-color: rgb(250, 137, 8);
+  color: black;
+}
+.btn-warning:hover{
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.btn-danger{
+  background-color: red;
+  border: 1px solid red;
+}
+.btn-danger:hover{
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.btn-completed{
+  border:1px solid rgb(32, 216, 32);
+  background-color: rgb(42, 202, 42);
+}
+.btn-completed:hover{
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.btn-notcompleted{
+  border:1px solid red;
+  background-color: red;
+}
+.btn-notcompleted:hover{
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.main-content{
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-title{
+  display: flex;
+  font-size: xx-large;
+  font-weight: bolder;
+  padding: 2rem;
+}
+.main-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 1rem;
+  border: 1px solid rgb(240, 189, 189);
+  color: black;
+  background-color: rgb(143, 107, 241);
+}
+
+.main-button:hover{
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background-color: rgb(102, 133, 238);
+}
+
+.form{
+  max-width: 1200px;
+  height: 15vw;
+  margin: auto;
+}
+
+.form-area{
+  margin: 1rem;
+}
+.form-group{
+  display: flex;
+  background-color: rgb(192, 216, 243);
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  border:1px solid rgb(200, 237, 240);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 1rem;
+  
+}
+.form-group:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.form-group-area{
+  padding: 4rem;
+  margin: 0.1rem;
+  background-color: rgb(247, 192, 166);
+  border: 8px solid rgba(223, 187, 187, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.form-group-area:hover{
+  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+}
+.form-group-area-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.form-name{
+  display: flex;
+  margin: 1rem;
+  border:1px solid whitesmoke;
+  padding: 0.5rem;
+}
+.form-name:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
+}
+.form-name-label{
+  padding: 1rem;
+  font-size: xx-large;
+  font-weight: 1000;
+}
+.form-description{
+  display: flex;
+  margin: 1rem;
+  border:1px solid whitesmoke;
+  padding: 1rem;
+
+}
+.form-description:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
+}
+.form-description-label{
+  padding: 1rem;
+  font-size: x-large;
+  font-weight: 1000;
+}
+.form-completed{
+  margin: 1rem;
+
+}
+.form-completed:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.form-completed-label{
+  margin: 0 0 0 0.5rem;
+  padding:0.5rem;
+  font-size: x-large;
+  font-weight: 1000;
+}
+
+
+.btn-submit{
+  margin: 0.5rem 3rem;
+  display: flex;
+  border:none;
+  background-color: rgb(188, 211, 245);
+}
+.btn-submit:hover{
+  background-color: rgb(248, 109, 104);
+  cursor: pointer;
+  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+}
+
+.btn-edit{
+  display: flex;
+  margin: 0.5rem 3rem;
+  border: 1px solid rgba(240, 204, 42, 0.884);
+  text-decoration: none;
+  background-color: rgba(240, 204, 42, 0.884);
+  color: black;
+}
+.btn-edit:hover{
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background-color: orange;
+}
+
+.btn-link{
+  color: black;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .toolbar-title{
+    margin: 1rem;
+  }
+  .toolbar-link{
+    padding: 0;
+  }
+  .toolbar-link-item{
+    margin: 1rem;
+  }
+  .btn{
+    display: inline-block;
+  }
+  .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .todo-card{
+    
+    padding: 5rem;
+    height: 50vw;
+    width: 50vw;
+    
+  }
+
+}
+@media only screen and (max-width: 770px) {
+  .toolbar-title{
+    margin: 1rem;
+    padding:1rem;
+  }
+  .toolbar-link{
+    padding: 1rem;
+  }
+  .toolbar-link-item{
+    margin: 0.2rem;
+  }
+  .btn{
+    display: inline-block;
+  }
+  .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .todo-card{
+    
+    padding: 2rem;
+    height: 50vw;
+    width: 50vw;
+    
+  }
+
+}
+@media only screen and (max-width: 758px ){
+  .toolbar-title{
+    margin: 1rem;
+    padding:1rem;
+    font-size: x-large;
+    font-weight: 1000;
+
+  }
+  .toolbar-link{
+    padding: 1rem;
+  }
+  .toolbar-link-item{
+    margin: 0.2rem;
+  }
+  .btn{
+    display: inline-block;
+  }
+  .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .todo-card{
+    
+    padding: 2rem;
+    height: 50vw;
+    width: 50vw;
+    
+  }
+
+}
+
+@media only screen and (max-width: 735px) {
+  .toolbar-title{
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  .toolbar-link{
+    padding: 0.5rem;
+  }
+  .toolbar-link-item{
+    margin: 0.2rem;
+  }
+  .btn{
+    display: inline-block;
+  }
+  .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .todo-card{
+    
+    padding: 2rem;
+    height: 50vw;
+    width: 50vw;
+    
+  }
+  .form-completed{
+    display: flex;
+  }
+
+}
+
+@media only screen and (max-width: 705px) {
+  .toolbar-title{
+    margin: 0.1rem;
+    padding: 0.1rem;
+  }
+  .toolbar-link{
+    padding: 0.5rem;
+  }
+  .toolbar-link-item{
+    margin: 0.1rem;
+  }
+  .btn{
+    display: inline-block;
+  }
+  .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .todo-card{
+    
+    padding: 2rem;
+    height: 50vw;
+    width: 50vw;
+    
+  }
+
+}
+
+@media only screen and (max-width: 673px) {
+  .toolbar-title{
+    margin: 0;
+    padding: 0;
+    font-size:x-large;
+    font-weight: 300;
+  }
+  .toolbar-link{
+    padding: 0.6rem;
+    font-size: x-large;
+    font-weight: 300;
+  }
+  .toolbar-link-item{
+    margin: 0;
+    padding: 0.2rem;
+    font-size: x-large;
+    font-weight: 300;
+  }
+  .btn{
+    display: inline-block;
+  }
+  .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .todo-card{
+    
+    padding: 2rem;
+    height: 50vw;
+    width: 50vw;
+    
+  }
+  .form-area{
+    height: 90vw;
+    width: 90vw;
+  }
+  .form-group-area{
+      height: 80vw;
+      width: 80vw;
+      max-width: 1000px;
+      margin: auto;
+  }
+  .form-group-area-title{
+    font-size: larger;
+    font-weight: 500;
+    margin:0;
+    
+  }
+  .form-name-label{
+    margin-right: 2rem;
+    font-size: larger;
+    font-weight: 500;
+  }
+  .form-name{
+    margin: 1rem 0 1rem 0;
+    padding: 1rem;
+  }
+  .form-description-label{
+    margin-right: 2rem;
+    font-size: larger;
+    font-weight: 500;
+  }
+  .form-description{
+    margin: 1rem 2rem 1rem 0;
+    padding: 0.1rem;
+  }
+  .form-completed-label{
+    margin-right: 2rem;
+    font-size: larger;
+    font-weight: 500;
+  }
+
+  .form-completed{
+    margin: 1rem 1rem 0.1rem 0;
+    padding: 0.1rem;
+    display: inline-block;
+  }
+  .form-completed-custom-label{
+    margin: 0.1rem;
+    padding: 0.1rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .toolbar-title{
+    margin: 0;
+    padding: 0;
+    font-size:large;
+    font-weight: 300;
+  }
+  .toolbar-link{
+    padding: 0.6rem;
+    font-size: large;
+    font-weight: 300;
+  }
+  .toolbar-link-item{
+    margin: 0;
+    padding: 0.2rem;
+    font-size: large;
+    font-weight: 300;
+  }
+  .btn{
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  .card{
+    display: flex;
+  }
+  .todo-card{
+    
+    padding: 1.1rem;
+    height: 70vw;
+    width: 70vw;
+    
+  }
+  .form-area{
+    height: 100vw;
+    width: 90vw;
+  }
+  .form-group-area{
+      height: 90vw;
+      width: 80vw;
+      max-width: 1000px;
+      margin: auto;
+  }
+  .form-group-area-title{
+    font-size: larger;
+    font-weight: 500;
+    margin:0;
+    
+  }
+  .form-name-label{
+    margin-right: 2rem;
+    font-size: larger;
+    font-weight: 500;
+  }
+  .form-name{
+    margin: 1rem 0 1rem 0;
+    padding: 1rem;
+  }
+  .form-description-label{
+    margin-right: 2rem;
+    font-size: larger;
+    font-weight: 500;
+  }
+  .form-description{
+    margin: 0.1rem;
+    padding: 0.1rem;
+  }
+  .form-completed-label{
+    margin-right: 2rem;
+    font-size: larger;
+    font-weight: 500;
+  }
+
+  .form-completed{
+    margin: 1rem 1rem 0.1rem 0;
+    padding: 0.1rem;
+  }
+  .form-completed-custom-label{
+    margin: 0.1rem;
+    padding: 0.1rem;
+  }
+  
+}
+
+
+
+@media only screen and (max-width: 560px) {
+  .toolbar-title{
+    margin: 0;
+    padding: 0;
+    font-size:large;
+    font-weight: 300;
+  }
+  .toolbar-link{
+    padding: 0.6rem;
+    font-size: large;
+    font-weight: 300;
+  }
+  .toolbar-link-item{
+    margin: 0;
+    padding: 0.2rem;
+    font-size: large;
+    font-weight: 300;
+  }
+  .btn{
+    display: inline-block;
+  }
+  .card{
+    display: flex;
+  }
+  .todo-card{
+    
+    padding: 1.3rem;
+    height: 60vw;
+    width: 60vw;
+    
+  }
+  
+}
+@media only screen and (max-width: 545px) {
+  .toolbar-title{
+    margin: 0;
+    padding: 0;
+    font-size:large;
+    font-weight: 300;
+  }
+  .toolbar-link{
+    padding: 0.6rem;
+    font-size: large;
+    font-weight: 300;
+  }
+  .toolbar-link-item{
+    margin: 0;
+    padding: 0.2rem;
+    font-size: large;
+    font-weight: 300;
+  }
+  .btn{
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  .card{
+    display: flex;
+  }
+  .todo-card{
+    
+    padding: 1.1rem;
+    height: 70vw;
+    width: 70vw;
+    
+  }
+  .form-area{
+    height: 120vw;
+    width: 100vw;
+  }
+  .form-group-area{
+      height: 110vw;
+      width: 80vw;
+      max-width: 1000px;
+      margin: auto;
+  }
+  .form-group-area-title{
+    font-size: larger;
+    font-weight: 500;
+    margin:0;
+    
+  }
+  .form-name-label{
+    margin-right: 2rem;
+    font-size: larger;
+    font-weight: 500;
+  }
+  .form-name{
+    margin: 1rem 0 1rem 0;
+    padding: 1rem;
+  }
+  .form-description-label{
+    margin-right: 2rem;
+    font-size: larger;
+    font-weight: 500;
+  }
+  textarea{
+    width: 200px
+  }
+  .form-description{
+    resize: none;
+  }
+  .form-completed-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+  }
+  .form-completed-label{
+    margin-right: 2rem;
+    font-size: larger;
+    font-weight: 500;
+  }
+
+  .form-completed{
+    margin: 0.1rem;
+    padding: 0.1rem;
+  }
+
+  
+}
+
+@media only screen and (max-width: 543px) {
+  .toolbar-title{
+    margin: 0;
+    padding: 0;
+    font-size:large;
+    font-weight: 300;
+  }
+  .toolbar-link{
+    padding: 0.6rem;
+    font-size: large;
+    font-weight: 300;
+  }
+  .toolbar-link-item{
+    margin: 0;
+    padding: 0.2rem;
+    font-size: large;
+    font-weight: 300;
+  }
+  .btn{
+    display: inline-block;
+  }
+  .card{
+    display: block;
+  }
+  .todo-card{
+    
+    padding: 2rem;
+    height: 70vw;
+    width: 70vw;
+    
+  }
+  .form-area{
+    height: 110vw;
+    width: 90vw;
+  }
+  .form-group-area{
+      height: 100vw;
+      width: 70vw;
+      max-width: 1000px;
+      margin: auto;
+  }
+  .form-group-area-title{
+    font-size: larger;
+    font-weight: 500;
+    margin:0;
+    
+  }
+  .form-name-label{
+    margin-right: 2rem;
+    font-size: larger;
+    font-weight: 500;
+  }
+  .form-name{
+    margin: 1rem 0 1rem 0;
+    padding: 1rem;
+  }
+  .form-description-label{
+    margin-right: 2rem;
+    font-size: larger;
+    font-weight: 500;
+  }
+  textarea{
+    width: 200px
+  }
+  .form-description{
+    resize: none;
+  }
+  .form-completed-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    margin-right: 2rem;
+    font-size: larger;
+    font-weight: 500;
+  }
+
+  .form-completed{
+    margin: 0.1rem;
+    padding: 0.1rem;
+  }
+
+}
+
+
+@media only screen and (max-width: 450px) {
+  .toolbar-title{
+    margin: 0;
+    padding: 0;
+    font-size:medium;
+    font-weight: 500;
+  }
+  .toolbar-link{
+    padding: 0.6rem;
+    font-size: medium;
+    font-weight: 500;
+  }
+  .toolbar-link-item{
+    margin: 0;
+    padding: 0.2rem;
+    font-size: medium;
+    font-weight: 500;
+  }
+  .btn{
+    display: inline-block;
+  }
+  .card{
+    display: block;
+  }
+  .todo-card{
+    
+    padding: 2rem;
+    height: 70vw;
+    width: 70vw;
+    
+  }
+
+}
+
+@media only screen and (max-width: 422px) {
+  .toolbar-title{
+    margin: 0;
+    padding: 0;
+    font-size:small;
+    font-weight: 1000;
+  }
+  .toolbar-link{
+    padding: 0.6rem;
+    font-size: small;
+    font-weight: 1000;
+  }
+  .toolbar-link-item{
+    margin: 0;
+    padding: 0.2rem;
+    font-size: small;
+    font-weight: 1000;
+  }
+  .btn{
+    display: inline-block;
+  }
+  .card{
+    display: block;
+  }
+  .todo-card{
+    
+    padding: 2rem;
+    height: 80vw;
+    width: 80vw;
+    
+  }
+
+}
+
+@media only screen and (max-width: 418px) {
+  .toolbar-title{
+    margin: 0;
+    padding: 0;
+    font-size:medium;
+    font-weight: 200;
+  }
+  .toolbar-link{
+    padding: 0.6rem;
+    font-size: large;
+    font-weight: 300;
+  }
+  .toolbar-link-item{
+    margin: 0;
+    padding: 0.2rem;
+    font-size: medium;
+    font-weight: 200;
+  }
+  .btn{
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  .card{
+    display: flex;
+  }
+  .todo-card{
+    
+    padding: 1.1rem;
+    height: 70vw;
+    width: 70vw;
+    
+  }
+  .form-area{
+    height: 140vw;
+    width: 100vw;
+  }
+  .form-group-area{
+      height: 130vw;
+      width: 80vw;
+      max-width: 1000px;
+      margin: auto;
+  }
+  .form-group-area-title{
+    font-size: larger;
+    font-weight: 500;
+    margin:0;
+    
+  }
+  .form-name-label{
+    margin-right: 2rem;
+    font-size: larger;
+    font-weight: 500;
+  }
+  .form-name{
+    margin: 1rem 0 1rem 0;
+    padding: 1rem;
+  }
+  .form-description-label{
+    margin-right: 2rem;
+    font-size: larger;
+    font-weight: 500;
+  }
+  textarea{
+    width: 200px
+  }
+  .form-description{
+    resize: none;
+  }
+  .form-completed-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+  }
+  .form-completed-label{
+    margin-right: 1rem;
+    font-size: larger;
+    font-weight: 500;
+  }
+
+  .form-completed{
+    margin: 0.1rem;
+    padding: 0.1rem;
+  }
+
+  
 }
